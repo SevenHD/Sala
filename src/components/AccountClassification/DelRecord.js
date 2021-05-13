@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import { myContext } from "./Reducer/reducer";
+// import React, { useContext } from "react";
+// import { myContext } from "./Reducer/reducer";
 
 export default function DelRecord(props) {
-  const { state, dispatch } = useContext(myContext);
+  // const {} = useContext(myContext);
 
   return (
     <table>

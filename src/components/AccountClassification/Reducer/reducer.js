@@ -1,9 +1,9 @@
 import { createContext, useReducer } from "react";
-import {testdata2} from "../../../testdata";
+import { testdata2 } from "../../../testdata";
 
 const initialState = {
   model: "def",
-  data: testdata2,
+  data: [],
   filter: {
     by: "default",
     value: "",

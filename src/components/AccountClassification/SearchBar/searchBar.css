@@ -1,0 +1,61 @@
+div .filter_by_wrapper {
+  position: relative;
+  left: 38%;
+  padding: 20px;
+  width: 24%;
+  height: fit-content;
+  text-align: center;
+  font-family: "Trebuchet MS";
+  background-color: gainsboro;
+  color: #0e3c5f;
+  border-radius: 20px;
+}
+div .filter_value_wrapper {
+  position: relative;
+  left: 30%;
+  text-align: center;
+  padding: 20px;
+  top: 20px;
+  width: 40%;
+  height: fit-content;
+  font-family: "Trebuchet MS";
+  background-color: gainsboro;
+  color: #0e3c5f;
+  border-radius: 20px;
+}
+div label {
+  margin-right: 20px;
+  margin-right: 20px;
+}
+div label input {
+  margin-right: 20px;
+  width: auto;
+}
+select .value_select {
+  text-align: center;
+  text-align-last: center;
+  height: 30px;
+  width: 20%;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+.search_button {
+  border: none;
+  width: 150px;
+  height: 30px;
+  border-radius: 10px;
+  color: aliceblue;
+  background-color: #0e3c5f;
+  transition-duration: 300ms;
+  /* padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 20px;
+  padding-right: 20px; */
+}
+.search_button:hover {
+  background-color: #539629;
+}
+.search_button:disabled {
+  background-color: grey;
+}

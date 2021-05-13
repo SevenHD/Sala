@@ -6,7 +6,7 @@ import * as RiIcons from "react-icons/ri";
 
 export const SideNavData = [
   {
-    title: "Operations",
+    title: "Account Classification",
     path: "/",
     icon: <AiIcons.AiFillHome />,
     iconClosed: <RiIcons.RiArrowDownSFill />,
@@ -14,9 +14,14 @@ export const SideNavData = [
 
     subNav: [
       {
+        title: "Search",
+        path: "/search",
+        icon: <AiIcons.AiOutlineSearch />,
+      },
+      {
         title: "View",
         path: "/view",
-        icon: <AiIcons.AiOutlineUnorderedList />,
+        icon: <AiIcons.AiOutlineTable />,
       },
       {
         title: "Add",
@@ -24,15 +29,31 @@ export const SideNavData = [
         icon: <AiIcons.AiOutlineFileAdd />,
       },
       {
-        title: "Delete",
-        path: "/delete",
-        icon: <AiIcons.AiOutlineDelete />,
-      },
-      {
-        title: "Modify",
-        path: "/modify",
+        title: "Update",
+        path: "/update",
         icon: <AiIcons.AiOutlineEdit />,
       },
     ],
+  },
+  {
+    title: "Help",
+    path: "/",
+    icon: <AiIcons.AiFillQuestionCircle />,
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />,
+  },
+  {
+    title: "Contact Us",
+    path: "/",
+    icon: <AiIcons.AiFillCustomerService />,
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />,
+  },
+  {
+    title: "Log out",
+    path: "/",
+    icon: <AiIcons.AiOutlineLogout />,
+    iconClosed: <RiIcons.RiArrowDownSFill />,
+    iconOpened: <RiIcons.RiArrowUpSFill />,
   },
 ];

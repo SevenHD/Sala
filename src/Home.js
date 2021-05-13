@@ -1,8 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import FilterBar from "./components/AccountClassification/FilterBar";
+import SearchBar from "./components/AccountClassification/SearchBar/SearchBar";
 import SideNav from "./components/AccountClassification/SideNav";
-import AddRecord from "./components/AccountClassification/AddRecord";
+import AddRecord from "./components/AccountClassification/Add/AddRecord";
 import ModRecord from "./components/AccountClassification/ModRecord";
 import DelRecord from "./components/AccountClassification/DelRecord";
 import ViewList from "./components/AccountClassification/ViewList";
@@ -20,11 +20,21 @@ export default function Home() {
           )}
         />
         <Route
+          path="/search"
+          render={(routeProps) => (
+            <>
+              <div className="right_div">
+                <SearchBar {...routeProps} />
+              </div>
+            </>
+          )}
+        />
+        <Route
           path="/view"
           render={(routeProps) => (
             <>
               <div className="right_div">
-                <FilterBar {...routeProps} />
+                <SearchBar {...routeProps} />
                 <ViewList {...routeProps} />
               </div>
             </>
@@ -41,7 +51,7 @@ export default function Home() {
           )}
         />
         <Route
-          path="/modify"
+          path="/update"
           render={(routeProps) => (
             <>
               <div className="right_div">

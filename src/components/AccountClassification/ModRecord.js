@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import { myContext } from "./Reducer/reducer";
+// import React, { useContext } from "react";
+// import { myContext } from "./Reducer/reducer";
 
 export default function ModRecord(props) {
-  const { state, dispatch } = useContext(myContext);
+  // const {} = useContext(myContext);
   // const handleModify = () => {
   //   const valid = Array.from(new Set(Object.values(state.validation)));
   //   if (valid.length === 1 && valid[0] === true) {

@@ -1,13 +1,14 @@
 import React, { useContext } from "react";
-import { myContext } from "./Reducer/reducer";
+import { myContext } from "../Reducer/reducer";
 import {
   existCheck,
   fieldCheck,
   regex_list,
   errorMsg,
   abbr,
-} from "./Functions/FieldCheck";
-import { record_titles, record_titles_fields } from "./Functions/AddTitles";
+} from "../Functions/FieldCheck";
+import { record_titles, record_titles_fields } from "../Functions/AddTitles";
+import "./add.css";
 export default function AddRecord(props) {
   const { state, dispatch } = useContext(myContext);
 

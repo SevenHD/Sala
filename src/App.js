@@ -11,18 +11,26 @@ function App() {
       <img src={companyLogo} alt="USDA logo" />
       <ul className="header">
         <li>
-          <NavLink exact to="/react-spa/home" id="homelink">
-            Account Classification
+          <NavLink exact to="/react-spa/Home" id="homelink">
+            Menu
           </NavLink>
         </li>
         <li>
-          <NavLink to="/react-spa/customers" id="customerslink">
-            Customers
+          <NavLink
+            to="/react-spa/ReportingFunctions"
+            id="reportingfunctionlink"
+          >
+            Reporting Functions
           </NavLink>
         </li>
         <li>
-          <NavLink to="/react-spa/loans" id="loanslink">
-            Loans
+          <NavLink to="/react-spa/FLPHome" id="flphomelink">
+            FLP Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/react-spa/ReportsHome" id="reportshomelink">
+            Reports Home
           </NavLink>
         </li>
       </ul>

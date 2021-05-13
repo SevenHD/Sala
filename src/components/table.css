@@ -28,8 +28,7 @@ tfoot td {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
-  background-color: #FFF8DC;
-  color: black;
+  background-color: gainsboro;
 }
 
 #view_table {
@@ -40,4 +39,8 @@ tfoot td {
 
 .radioLeft {
   text-align: left;
+}
+.table_wrapper {
+  position: relative;
+  margin-top: 40px;
 }

@@ -17,7 +17,7 @@ export const SidebarWrap = styled.div`
   font-family: "Trebuchet MS";
   font-size: 18px;
   height: 100px;
-  width: 212px;
+  width: 280px;
 `;
 
 export const SidebarLink = styled(Link)`

@@ -2,6 +2,7 @@ import axios from "axios";
 import { api_ac_list, api_ts_list, api_fy_list, api_data_list } from "./Apis";
 
 export const getData = (filter, dispatch) => {
+  console.log("POST request send to server to get records");
   axios({
     method: "post",
     url: api_data_list,
@@ -17,6 +18,7 @@ export const getData = (filter, dispatch) => {
 };
 
 export const getACList = (dispatch) => {
+  console.log("GET request send to server to get appropriation code list");
   axios
     .get(api_ac_list)
     .then((res) => {
@@ -28,6 +30,7 @@ export const getACList = (dispatch) => {
 };
 
 export const getTSList = (dispatch) => {
+  console.log("GET request send to server to get treasury list");
   axios
     .get(api_ts_list)
     .then((res) => {
@@ -39,6 +42,7 @@ export const getTSList = (dispatch) => {
 };
 
 export const getFYList = (filter, dispatch) => {
+  console.log("GET request send to server to get fiscal year list");
   axios
     .get(api_fy_list(filter))
     .then((res) => {

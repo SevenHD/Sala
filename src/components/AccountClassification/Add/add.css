@@ -1,0 +1,55 @@
+button {
+  margin-right: 2%;
+  font-weight: bold;
+}
+
+input {
+  width: 80%;
+}
+
+select {
+  margin-right: 2%;
+  margin-left: 1%;
+}
+
+.add_title {
+  background-color: lavenderblush;
+  font-weight: bold;
+}
+
+.add_td_immutable {
+  background-color: coral;
+}
+
+#add_td_treasurySymbol {
+  width: 20%;
+}
+
+#add_input_treasurySymbol {
+  width: 93%;
+}
+
+#success_add_info {
+  background-color: lightgreen;
+}
+
+#failed_add_info {
+  background-color: lightsalmon;
+}
+
+#default_add_info {
+  background-color: #fff;
+}
+
+.add_statu {
+  font-family: sans-serif;
+}
+
+.error_msg_title {
+  background-color: lavenderblush;
+}
+
+.error_msg {
+  background-color: lavenderblush;
+  color: red;
+}

@@ -1,5 +1,6 @@
 import React, { useContext, useMemo, useEffect } from "react";
 import { useTable, useSortBy, usePagination } from "react-table";
+import { FaSort, FaCaretUp, FaCaretDown } from "react-icons/fa";
 import { myContext } from "./Reducer/reducer";
 import { VIEW_COLUMNS } from "./Columns/View";
 import { getData } from "./Actions/GetData";
@@ -9,24 +10,21 @@ export default function ViewList() {
   const { state, dispatch } = useContext(myContext);
   const columns = useMemo(() => VIEW_COLUMNS, []);
   const data = state.data;
-  
+
   /* useEffect will be executed once after the first render, 
     just like what ComponentDidMount do because the second argument is an empty array*/
   useEffect(() => {
     /* Create a filter object */
     const filter = createFilter(state.filter);
     getData(filter, dispatch);
-  }, []);
+  }, [dispatch, state.filter]);
 
   const {
     getTableProps,
     getTableBodyProps,
     headerGroups,
     prepareRow,
-    page, // Instead of using 'rows', we'll use page,
-    // which has only the rows for the active page
-
-    // The rest of these things are super handy, too ;)
+    page,
     canPreviousPage,
     canNextPage,
     pageOptions,
@@ -44,40 +42,57 @@ export default function ViewList() {
 
   return (
     state.data.length !== 0 && (
-      <>
+      <div className="table_wrapper">
         <table {...getTableProps()} id="view_table">
           <thead>
             {
               // Loop over the header rows
-              headerGroups.map((headerGroup) => (
+              headerGroups.map((headerGroup, index) => (
                 // Apply the header row props
-                <>
-                  <tr {...headerGroup.getHeaderGroupProps()}>
-                    {
-                      // Loop over the headers in each row
-                      headerGroup.headers.map((column) => (
-                        // Apply the header cell props
-                        <th
-                          {...column.getHeaderProps(
-                            column.getSortByToggleProps()
-                          )}
-                        >
-                          {
-                            // Render the header
-                            column.render("Header")
-                          }
+                <tr
+                  {...headerGroup.getHeaderGroupProps()}
+                  key={`header_${index}`}
+                >
+                  {
+                    // Loop over the headers in each row
+                    headerGroup.headers.map((column, i) => (
+                      // Apply the header cell props
+                      <th
+                        key={`header_${index}_${i}`}
+                        {...column.getHeaderProps(
+                          column.getSortByToggleProps()
+                        )}
+                      >
+                        {
+                          // Render the header
+                          column.render("Header")
+                        }
+                        {column.accessor !== undefined && (
                           <span>
-                            {column.isSorted
-                              ? column.isSortedDesc
-                                ? " 🔽"
-                                : " 🔼"
-                              : ""}
+                            {column.isSorted ? (
+                              column.isSortedDesc ? (
+                                <>
+                                  {" "}
+                                  <FaCaretDown />
+                                </>
+                              ) : (
+                                <>
+                                  {" "}
+                                  <FaCaretUp />
+                                </>
+                              )
+                            ) : (
+                              <>
+                                {" "}
+                                <FaSort />
+                              </>
+                            )}
                           </span>
-                        </th>
-                      ))
-                    }
-                  </tr>
-                </>
+                        )}
+                      </th>
+                    ))
+                  }
+                </tr>
               ))
             }
           </thead>
@@ -144,7 +159,7 @@ export default function ViewList() {
             ))}
           </select>
         </div>
-      </>
+      </div>
     )
   );
   // <table>
