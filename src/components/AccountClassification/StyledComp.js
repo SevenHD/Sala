@@ -15,18 +15,19 @@ export const SidebarNav = styled.nav`
 
 export const SidebarWrap = styled.div`
   font-family: "Trebuchet MS";
-  font-size: 18px;
+  font-size: 12px;
   height: 100px;
-  width: 280px;
+  width: 200px;
 `;
 
 export const SidebarLink = styled(Link)`
   background: #0e3c5f;
+  height: 20px;
   display: flex;
   color: #e1e9fc;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
   list-style: none;
   text-decoration: none;
   transition: 300ms;
@@ -42,14 +43,14 @@ export const SidebarLabel = styled.span`
 
 export const DropdownLink = styled(Link)`
   background: #0e3c5f;
-  height: 50px;
+  height: 20px;
   padding: 8px;
   padding-left: 3rem;
   display: flex;
   align-items: center;
   text-decoration: none;
   color: #f5f5f5;
-  font-size: 18px;
+  font-size: 12px;
   transition: 300ms;
   &:hover {
     background: #539629;

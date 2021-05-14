@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useContext, useMemo, useEffect } from "react";
 import { useTable, useSortBy, usePagination } from "react-table";
 import { FaSort, FaCaretUp, FaCaretDown } from "react-icons/fa";
@@ -17,7 +18,7 @@ export default function ViewList() {
     /* Create a filter object */
     const filter = createFilter(state.filter);
     getData(filter, dispatch);
-  }, [dispatch, state.filter]);
+  }, []);
 
   const {
     getTableProps,
@@ -115,27 +116,25 @@ export default function ViewList() {
         <div className="pagination">
           <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
             {"<<"}
-          </button>{" "}
+          </button>
           <button onClick={() => previousPage()} disabled={!canPreviousPage}>
             {"<"}
-          </button>{" "}
+          </button>
+          <span>
+            Page
+            {pageIndex + 1} of {pageOptions.length}
+          </span>
           <button onClick={() => nextPage()} disabled={!canNextPage}>
             {">"}
-          </button>{" "}
+          </button>
           <button
             onClick={() => gotoPage(pageCount - 1)}
             disabled={!canNextPage}
           >
             {">>"}
-          </button>{" "}
+          </button>
           <span>
-            Page{" "}
-            <strong>
-              {pageIndex + 1} of {pageOptions.length}
-            </strong>{" "}
-          </span>
-          <span>
-            | Go to page:{" "}
+            | Go to page:
             <input
               type="number"
               defaultValue={pageIndex + 1}

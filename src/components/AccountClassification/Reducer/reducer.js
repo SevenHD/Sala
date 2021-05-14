@@ -3,13 +3,13 @@ import { testdata2 } from "../../../testdata";
 
 const initialState = {
   model: "def",
-  data: [],
+  data: testdata2,
   filter: {
     by: "default",
     value: "",
-    list: [],
+    list: [1, 2, 3],
     fiscal_year: "",
-    fy_list: [],
+    fy_list: [4, 5, 6],
   },
 
   selected: {},

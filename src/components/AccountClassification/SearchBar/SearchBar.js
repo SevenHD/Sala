@@ -51,7 +51,7 @@ export default function SearchBar(props) {
                 dispatch({ type: "SET_FILTER_FY", value: "" });
               }}
             />
-            {`By ${filter.label}`}
+            <span>{`By ${filter.label}`}</span>
           </label>
         ))}
       </div>
