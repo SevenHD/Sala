@@ -73,7 +73,9 @@ export default function SearchBar(props) {
               >
                 <option value="">Please Select..</option>
                 {state.filter[item.list].map((opt) => (
-                  <option value={opt}>{opt}</option>
+                  <option value={opt} key={`option_${opt}`}>
+                    {opt}
+                  </option>
                 ))}
               </select>
             </label>
@@ -105,7 +107,9 @@ export default function SearchBar(props) {
               >
                 <option value="">Please Select..</option>
                 {state.filter[item.list].map((opt) => (
-                  <option value={opt}>{opt}</option>
+                  <option value={opt} key={`option_${opt}`}>
+                    {opt}
+                  </option>
                 ))}
               </select>
             </label>
